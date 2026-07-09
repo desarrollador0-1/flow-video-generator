@@ -28,3 +28,9 @@ jobs:
       - name: Ejecutar programa
         run: |
           python src/main.py
+
+      - name: Guardar captura
+        uses: actions/upload-artifact@v4
+        with:
+          name: captura-flow
+          path: flow.png

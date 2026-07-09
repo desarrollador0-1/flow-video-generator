@@ -15,5 +15,7 @@ def probar_navegador():
 
         print(page.title())
         print(page.url)
-
+        
+        page.screenshot(path="flow.png")
+        
         browser.close()
