@@ -1,0 +1,11 @@
+.venv/
+
+__pycache__/
+
+downloads/
+
+playwright-report/
+
+test-results/
+
+*.log
