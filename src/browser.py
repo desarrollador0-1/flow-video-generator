@@ -3,7 +3,13 @@ from playwright.sync_api import sync_playwright
 def probar_navegador():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
+
         page = browser.new_page()
-        page.goto("https://example.com")
+
+        page.goto("https://flow.google/")
+        page.wait_for_timeout(5000)
+
         print(page.title())
+        print(page.url)
+
         browser.close()
