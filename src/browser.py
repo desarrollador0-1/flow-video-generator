@@ -6,7 +6,11 @@ def probar_navegador():
 
         page = browser.new_page()
 
-        page.goto("https://flow.google/")
+        page.goto(
+            "https://flow.google/",
+            wait_until="domcontentloaded",
+            timeout=60000
+        )
         page.wait_for_timeout(5000)
 
         print(page.title())
